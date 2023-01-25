@@ -8,12 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var value : UILabel!
+    
+    @IBAction func converterChanged(textField:UITextField){
+        value.text = textField.text
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        value.text = "0"
     }
 
-
+    
 }
 
