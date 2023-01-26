@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Conversion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,10 +41,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="322" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpa-39-zI9">
-                                <rect key="frame" x="185" y="357" width="60" height="34"/>
+                                <rect key="frame" x="163" y="357" width="104" height="34"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="sQP-N3-Dq3"/>
+                                    <constraint firstAttribute="width" constant="104" id="XKT-9e-bi6"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -56,24 +56,35 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.90631872591826124" green="0.97631927102819704" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="0be-Eq-47i" firstAttribute="top" secondItem="O0y-5a-mm8" secondAttribute="bottom" constant="8.3333333333333144" id="7V2-qH-zfy"/>
-                            <constraint firstItem="0be-Eq-47i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="90p-iP-KCf"/>
-                            <constraint firstItem="vpa-39-zI9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lgr-Bu-rZ0"/>
-                            <constraint firstItem="wZT-Fs-edp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O20-6q-FLG"/>
-                            <constraint firstItem="O0y-5a-mm8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TfE-nN-bYJ"/>
-                            <constraint firstItem="0X0-gS-c8F" firstAttribute="top" secondItem="0be-Eq-47i" secondAttribute="bottom" constant="8.3333333333333144" id="Z49-wm-Egf"/>
-                            <constraint firstItem="O0y-5a-mm8" firstAttribute="top" secondItem="wZT-Fs-edp" secondAttribute="bottom" constant="7.3333333333333144" id="cGZ-SG-jrc"/>
-                            <constraint firstItem="vpa-39-zI9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="kWQ-Cb-7fg"/>
-                            <constraint firstItem="wZT-Fs-edp" firstAttribute="top" secondItem="vpa-39-zI9" secondAttribute="bottom" constant="8" symbolic="YES" id="lz0-en-lyw"/>
-                            <constraint firstItem="0X0-gS-c8F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rvw-Fi-S54"/>
+                            <constraint firstItem="0be-Eq-47i" firstAttribute="top" secondItem="O0y-5a-mm8" secondAttribute="bottom" constant="8.3333333333333144" id="4Ih-za-7jK"/>
+                            <constraint firstItem="vpa-39-zI9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="Afn-SQ-l2U"/>
+                            <constraint firstItem="0X0-gS-c8F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CWw-4L-8SY"/>
+                            <constraint firstItem="0X0-gS-c8F" firstAttribute="top" secondItem="0be-Eq-47i" secondAttribute="bottom" constant="8.3333333333333144" id="FR3-JY-07A"/>
+                            <constraint firstItem="0be-Eq-47i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LpM-Do-QLv"/>
+                            <constraint firstItem="wZT-Fs-edp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OHt-B0-p1k"/>
+                            <constraint firstItem="O0y-5a-mm8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R47-Ck-LWG"/>
+                            <constraint firstItem="vpa-39-zI9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="REO-zM-sCa"/>
+                            <constraint firstItem="wZT-Fs-edp" firstAttribute="top" secondItem="vpa-39-zI9" secondAttribute="bottom" constant="8" symbolic="YES" id="Ug8-4l-bVm"/>
+                            <constraint firstItem="O0y-5a-mm8" firstAttribute="top" secondItem="wZT-Fs-edp" secondAttribute="bottom" constant="7.3333333333333144" id="iwj-M0-YuA"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XH1-DP-neJ" appends="YES" id="2YJ-FY-VCm"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="background" destination="8bC-Xf-vdC" id="JhA-ks-jNe"/>
+                        <outlet property="input" destination="vpa-39-zI9" id="FxB-AP-oPl"/>
                         <outlet property="value" destination="0be-Eq-47i" id="bvt-vf-n4O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XH1-DP-neJ">
+                    <connections>
+                        <action selector="dismissKeyboardWith_sender:" destination="BYZ-38-t0r" id="kpH-nx-Q1j"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="54.418604651162788" y="3.218884120171674"/>
         </scene>
