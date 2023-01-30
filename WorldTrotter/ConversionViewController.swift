@@ -44,6 +44,7 @@ class ConversionViewController: UIViewController {
     func changeBGColor(celcius : Float){
         background.backgroundColor = UIColor(red: CGFloat(0.8 + celcius*0.001), green: CGFloat(0.9 - celcius*0.003), blue: CGFloat(1 - celcius*0.003), alpha: 0.8)
     }
+    
     func changeValueColor(celcius : Float){
         value.textColor = UIColor(red: CGFloat(1-(0.8 + celcius*0.001)), green: CGFloat(1-(0.9 - celcius*0.003)), blue: CGFloat(1-(1 - celcius*0.003)), alpha: 1)
         
